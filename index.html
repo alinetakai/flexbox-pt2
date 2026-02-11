@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Flexbox</h1>
+
+<section>
+<h2>1️⃣ flex-direction</h2>
+
+<p><strong>Define a direção dos elementos.</strong></p>
+
+<p>Ela decide se os itens vão ficar organizados em linha (horizontal) ou coluna (vertical).</p>
+
+<h3>🔹 Sintaxe</h3>
+<div class="code">
+.container {
+  display: flex;
+  flex-direction: row; /* ou column */
+}
+</div>
+
+<h3>Antes (padrão: row)</h3>
+<div class="container-demo row">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+<h3>Depois (column)</h3>
+<div class="container-demo column">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+</div>
+
+<p><strong>Importante:</strong> O flex-direction define o eixo principal.</p>
+<ul>
+<li>row → eixo principal horizontal</li>
+<li>column → eixo principal vertical</li>
+</ul>
+</section>
+
+<section>
+<h2>2️⃣ flex-wrap</h2>
+
+<p><strong>Permite que os elementos quebrem para a próxima linha.</strong></p>
+
+<h3>🔹 Sintaxe</h3>
+<div class="code">
+.container {
+  display: flex;
+  flex-wrap: wrap; /* ou nowrap */
+}
+</div>
+
+<h3>Antes (nowrap - padrão)</h3>
+<div class="container-demo" style="display:flex; flex-wrap:nowrap;">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+</div>
+
+<h3>Depois (wrap)</h3>
+<div class="container-demo wrap">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+</div>
+
+<p>Agora os elementos quebram para a próxima linha quando não há espaço suficiente.</p>
+</section>
+
+<section>
+<h2>3️⃣ flex-flow</h2>
+
+<p><strong>Junta flex-direction + flex-wrap em uma única linha.</strong></p>
+
+<h3>🔹 Sintaxe</h3>
+<div class="code">
+.container {
+  display: flex;
+  flex-flow: row wrap;
+}
+</div>
+
+<h3>Exemplo</h3>
+<div class="container-demo row-wrap">
+  <div class="box">1</div>
+  <div class="box">2</div>
+  <div class="box">3</div>
+  <div class="box">4</div>
+  <div class="box">5</div>
+</div>
+
+<p>Isso equivale a escrever:</p>
+
+<div class="code">
+flex-direction: row;
+</div>
+<div class="code">
+flex-wrap: wrap;
+</div>
+
+</section>
+
+<section>
+<h2>4️⃣ justify-content</h2>
+
+<p><strong>Alinha os elementos no eixo principal.</strong></p>
+
+<h3>🔹 Sintaxe</h3>
+<div class="code">
+.container {
+  display: flex;
+  justify-content: center;
+}
+</div>
+
+<h3>flex-start (padrão)</h3>
+<div class="container-justify-demo" style="justify-content: flex-start;">
+  <div class="box-justify">1</div>
+  <div class="box-justify">2</div>
+  <div class="box-justify">3</div>
+</div>
+
+<h3>center</h3>
+<div class="container-justify-demo" style="justify-content: center;">
+  <div class="box-justify">1</div>
+  <div class="box-justify">2</div>
+  <div class="box-justify">3</div>
+</div>
+
+<h3>flex-end</h3>
+<div class="container-justify-demo" style="justify-content: flex-end;">
+  <div class="box-justify">1</div>
+  <div class="box-justify">2</div>
+  <div class="box-justify">3</div>
+</div>
+
+<h3>space-between</h3>
+<div class="container-justify-demo" style="justify-content: space-between;">
+  <div class="box-justify">1</div>
+  <div class="box-justify">2</div>
+  <div class="box-justify">3</div>
+</div>
+
+<h3>space-evenly</h3>
+<div class="container-justify-demo" style="justify-content: space-evenly;">
+  <div class="box-justify">1</div>
+  <div class="box-justify">2</div>
+  <div class="box-justify">3</div>
+</div>
+
+<p><strong>Observe:</strong> O espaço cinza é o espaço disponível. O justify-content distribui esse espaço.</p>
+
+<p>Lembre-se: o eixo principal depende do flex-direction!</p>
+
+</section>
+
+<section>
+<h2>🧠 Resumão para os alunos</h2>
+
+<table>
+<tr>
+<th>Propriedade</th>
+<th>O que faz</th>
+</tr>
+<tr>
+<td>flex-direction</td>
+<td>Define se os elementos ficam em linha ou coluna</td>
+</tr>
+<tr>
+<td>flex-wrap</td>
+<td>Permite quebrar linha quando não há espaço</td>
+</tr>
+<tr>
+<td>flex-flow</td>
+<td>Junta direction + wrap</td>
+</tr>
+<tr>
+<td>justify-content</td>
+<td>Alinha os elementos no eixo principal</td>
+</tr>
+</table>
+</section>
+
+<section>
+<h2>💡 Dica Didática</h2>
+
+<div class="highlight">
+<p>
+"Flexbox é como organizar alunos em uma fila.
+Se eu disser <strong>row</strong>, eles ficam lado a lado.
+Se eu disser <strong>column</strong>, ficam um atrás do outro.
+Se eu disser <strong>wrap</strong>, quando a sala encher, começa outra fila."
+</p>
+</div>
+
+</section>
+
+<a href="quiz.html" class="btn-quiz">🚀 Fazer o Quiz</a>
+
+</body>
+</html>

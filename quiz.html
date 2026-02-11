@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz - Flexbox</title>
+
+<link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+
+<h1>Quiz - Flexbox</h1>
+
+<div class="quiz-container">
+
+<!-- ================= QUESTÕES 1 A 7 (MANTIDAS) ================= -->
+
+<!-- 1 -->
+<div class="question" id="q1">
+<p><strong>1) O que a propriedade flex-direction define?</strong></p>
+<label><input type="radio" name="q1" value="a"> O tamanho dos elementos</label>
+<label><input type="radio" name="q1" value="b"> A direção (linha ou coluna)</label>
+<label><input type="radio" name="q1" value="c"> A cor do container</label>
+<div class="feedback"></div>
+</div>
+
+<!-- 2 -->
+<div class="question" id="q2">
+<p><strong>2) Verdadeiro ou Falso:</strong>  
+"Se flex-direction for column, o eixo principal será vertical."</p>
+<label><input type="radio" name="q2" value="v"> Verdadeiro</label>
+<label><input type="radio" name="q2" value="f"> Falso</label>
+<div class="feedback"></div>
+</div>
+
+<!-- 3 -->
+<div class="question" id="q3">
+<p><strong>3) Complete o código para permitir quebra de linha:</strong></p>
+<pre>
+.container {
+  display: flex;
+  flex-_________: wrap;
+}
+</pre>
+<input type="text" id="input3">
+<div class="feedback"></div>
+</div>
+
+<!-- 4 -->
+<div class="question" id="q4">
+<p><strong>4) Qual propriedade junta flex-direction e flex-wrap?</strong></p>
+<label><input type="radio" name="q4" value="a"> flex-merge</label>
+<label><input type="radio" name="q4" value="b"> flex-flow</label>
+<label><input type="radio" name="q4" value="c"> flex-join</label>
+<div class="feedback"></div>
+</div>
+
+<!-- 5 -->
+<div class="question" id="q5">
+<p><strong>5) Se eu usar justify-content: center; os elementos:</strong></p>
+<label><input type="radio" name="q5" value="a"> Vão para o meio no eixo principal</label>
+<label><input type="radio" name="q5" value="b"> Quebram linha</label>
+<label><input type="radio" name="q5" value="c"> Mudam para coluna</label>
+<div class="feedback"></div>
+</div>
+
+<!-- 6 -->
+<div class="question" id="q6">
+<p><strong>6) Identifique o erro:</strong></p>
+<pre>
+.container {
+  display: flex;
+  justify-items: center;
+}
+</pre>
+<input type="text" id="input6">
+<div class="feedback"></div>
+</div>
+
+<!-- 7 -->
+<div class="question" id="q7">
+<p><strong>7) Qual valor coloca espaço APENAS entre os elementos?</strong></p>
+<label><input type="radio" name="q7" value="a"> space-around</label>
+<label><input type="radio" name="q7" value="b"> space-between</label>
+<label><input type="radio" name="q7" value="c"> center</label>
+<div class="feedback"></div>
+</div>
+
+<!-- ================= NOVAS QUESTÕES ================= -->
+
+<!-- 8 -->
+<div class="question" id="q8">
+<p><strong>8) Qual é o valor padrão do flex-direction?</strong></p>
+<label><input type="radio" name="q8" value="a"> column</label>
+<label><input type="radio" name="q8" value="b"> row</label>
+<label><input type="radio" name="q8" value="c"> wrap</label>
+<div class="feedback"></div>
+</div>
+
+<!-- 9 -->
+<div class="question" id="q9">
+<p><strong>9) Verdadeiro ou Falso:</strong>  
+"O flex-wrap só funciona se display:flex estiver definido."</p>
+<label><input type="radio" name="q9" value="v"> Verdadeiro</label>
+<label><input type="radio" name="q9" value="f"> Falso</label>
+<div class="feedback"></div>
+</div>
+
+<!-- 10 -->
+<div class="question" id="q10">
+<p><strong>10) Complete:</strong></p>
+<pre>
+.container {
+  display:flex;
+  flex-flow: column ________;
+}
+</pre>
+<input type="text" id="input10">
+<div class="feedback"></div>
+</div>
+
+<!-- 11 -->
+<div class="question" id="q11">
+<p><strong>11) Se flex-direction for column, justify-content irá alinhar:</strong></p>
+<label><input type="radio" name="q11" value="a"> Horizontalmente</label>
+<label><input type="radio" name="q11" value="b"> Verticalmente</label>
+<label><input type="radio" name="q11" value="c"> Não funciona</label>
+<div class="feedback"></div>
+</div>
+
+<!-- 12 -->
+<div class="question" id="q12">
+<p><strong>12) Qual valor distribui espaço IGUAL em todos os lados?</strong></p>
+<label><input type="radio" name="q12" value="a"> space-evenly</label>
+<label><input type="radio" name="q12" value="b"> space-between</label>
+<label><input type="radio" name="q12" value="c"> flex-start</label>
+<div class="feedback"></div>
+</div>
+
+<!-- 13 -->
+<div class="question" id="q13">
+<p><strong>13) Verdadeiro ou Falso:</strong>  
+"O justify-content organiza os elementos no eixo cruzado."</p>
+<label><input type="radio" name="q13" value="v"> Verdadeiro</label>
+<label><input type="radio" name="q13" value="f"> Falso</label>
+<div class="feedback"></div>
+</div>
+
+<!-- 14 -->
+<div class="question" id="q14">
+<p><strong>14) Qual propriedade permite quebrar linha?</strong></p>
+<label><input type="radio" name="q14" value="a"> flex-wrap</label>
+<label><input type="radio" name="q14" value="b"> justify-content</label>
+<label><input type="radio" name="q14" value="c"> flex-direction</label>
+<div class="feedback"></div>
+</div>
+
+<!-- 15 -->
+<div class="question" id="q15">
+<p><strong>15) Se nenhum espaço estiver sobrando no container, o justify-content:</strong></p>
+<label><input type="radio" name="q15" value="a"> Não terá efeito visível</label>
+<label><input type="radio" name="q15" value="b"> Vai quebrar linha</label>
+<label><input type="radio" name="q15" value="c"> Vai inverter o eixo</label>
+<div class="feedback"></div>
+</div>
+
+<button onclick="corrigir()">Corrigir Quiz</button>
+<div id="resultadoFinal" class="resultado"></div>
+
+</div>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>
